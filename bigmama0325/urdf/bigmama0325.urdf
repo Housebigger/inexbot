@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="bigmama0325">
+  <link
+    name="Link_0">
+    <inertial>
+      <origin
+        xyz="-0.0039908 -0.009769 0.036495"
+        rpy="0 0 0" />
+      <mass
+        value="0.73165" />
+      <inertia
+        ixx="0.0014653"
+        ixy="-1.2946E-05"
+        ixz="1.4236E-05"
+        iyy="0.0014114"
+        iyz="-7.475E-06"
+        izz="0.00098759" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_1">
+    <inertial>
+      <origin
+        xyz="-3.3307E-16 0.12 0.014813"
+        rpy="0 0 0" />
+      <mass
+        value="0.28238" />
+      <inertia
+        ixx="0.0027445"
+        ixy="2.2065E-21"
+        ixz="-6.0271E-21"
+        iyy="0.00019508"
+        iyz="-3.6395E-21"
+        izz="0.0029159" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_1"
+    type="revolute">
+    <origin
+      xyz="0.022 0 0.155"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="Link_0" />
+    <child
+      link="Link_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="0.25" />
+  </joint>
+  <link
+    name="Link_2">
+    <inertial>
+      <origin
+        xyz="0 0.098184 -0.051898"
+        rpy="0 0 0" />
+      <mass
+        value="0.34516" />
+      <inertia
+        ixx="0.0036332"
+        ixy="3.111E-18"
+        ixz="-4.7498E-19"
+        iyy="0.00034405"
+        iyz="0.00024115"
+        izz="0.0037914" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0.24 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link_1" />
+    <child
+      link="Link_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="0.25" />
+  </joint>
+  <link
+    name="Link_3">
+    <inertial>
+      <origin
+        xyz="0.018256 0.077688 0.029219"
+        rpy="0 0 0" />
+      <mass
+        value="0.40524" />
+      <inertia
+        ixx="0.0010067"
+        ixy="-1.0212E-05"
+        ixz="-1.2958E-05"
+        iyy="0.00027741"
+        iyz="1.4235E-05"
+        izz="0.0011025" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0.24 -0.0442"
+      rpy="0 0 0" />
+    <parent
+      link="Link_2" />
+    <child
+      link="Link_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="0.25" />
+  </joint>
+  <link
+    name="Link_4">
+    <inertial>
+      <origin
+        xyz="-0.00076775 -1.9008E-05 -0.02422"
+        rpy="0 0 0" />
+      <mass
+        value="0.32633" />
+      <inertia
+        ixx="0.00040432"
+        ixy="1.2544E-08"
+        ixz="-2.7228E-06"
+        iyy="0.00036238"
+        iyz="7.3014E-09"
+        izz="0.00071013" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_4"
+    type="revolute">
+    <origin
+      xyz="0 0.145 0.022"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Link_3" />
+    <child
+      link="Link_4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.0001"
+      upper="0.0001"
+      effort="0.0001"
+      velocity="0.0001" />
+  </joint>
+  <link
+    name="Link_innerfinger">
+    <inertial>
+      <origin
+        xyz="-0.0141 -4.2244E-08 0.0035467"
+        rpy="0 0 0" />
+      <mass
+        value="0.0087957" />
+      <inertia
+        ixx="1.1258E-06"
+        ixy="-6.7983E-12"
+        ixz="-4.8497E-08"
+        iyy="6.8954E-07"
+        iyz="-2.4226E-13"
+        izz="1.7193E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_innerfinger.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_innerfinger.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_innerfinger"
+    type="prismatic">
+    <origin
+      xyz="-0.05 -0.083205 -0.053291"
+      rpy="0 -0.078319 1.5708" />
+    <parent
+      link="Link_4" />
+    <child
+      link="Link_innerfinger" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.002"
+      upper="0.002"
+      effort="50"
+      velocity="0.005" />
+  </joint>
+  <link
+    name="Link_exterfinger">
+    <inertial>
+      <origin
+        xyz="-0.0141 -4.2244E-08 0.0035467"
+        rpy="0 0 0" />
+      <mass
+        value="0.0087957" />
+      <inertia
+        ixx="1.1258E-06"
+        ixy="-6.7983E-12"
+        ixz="-4.8497E-08"
+        iyy="6.8954E-07"
+        iyz="-2.4226E-13"
+        izz="1.7193E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_exterfinger.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bigmama0325/meshes/Link_exterfinger.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_exterfinger"
+    type="prismatic">
+    <origin
+      xyz="-0.05 0.083205 -0.053291"
+      rpy="0 -0.078319 -1.5708" />
+    <parent
+      link="Link_4" />
+    <child
+      link="Link_exterfinger" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.002"
+      upper="0.002"
+      effort="50"
+      velocity="0.005" />
+  </joint>
+</robot>

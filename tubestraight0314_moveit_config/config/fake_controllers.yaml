@@ -1,0 +1,8 @@
+controller_list:
+  - name: fake_tubestraight_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - Joint_wing
+initial:  # Define initial robot poses.
+  - group: tubestraight
+    pose: origin

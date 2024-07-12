@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="grippertest0325">
+  <link
+    name="Link_0">
+    <inertial>
+      <origin
+        xyz="0.01 0 0.00125"
+        rpy="0 0 0" />
+      <mass
+        value="0.00069635" />
+      <inertia
+        ixx="5.7565E-09"
+        ixy="-2.5269E-25"
+        ixz="-1.969E-25"
+        iyy="4.6225E-08"
+        iyz="3.767E-27"
+        izz="5.1256E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grippertest0325/meshes/Link_0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grippertest0325/meshes/Link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_1">
+    <inertial>
+      <origin
+        xyz="0.01 -1.3878E-17 0.00125"
+        rpy="0 0 0" />
+      <mass
+        value="0.00069635" />
+      <inertia
+        ixx="5.7565E-09"
+        ixy="-7.4647E-26"
+        ixz="-1.1962E-25"
+        iyy="4.6225E-08"
+        iyz="3.767E-27"
+        izz="5.1256E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grippertest0325/meshes/Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grippertest0325/meshes/Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_1"
+    type="revolute">
+    <origin
+      xyz="0.02 0 0.0027786"
+      rpy="0 0 0" />
+    <parent
+      link="Link_0" />
+    <child
+      link="Link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="50"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="Link_2">
+    <inertial>
+      <origin
+        xyz="0.048044 -0.10517 0.043641"
+        rpy="0 0 0" />
+      <mass
+        value="0.071091" />
+      <inertia
+        ixx="0.00020235"
+        ixy="-5.167E-07"
+        ixz="1.301E-05"
+        iyy="0.00014954"
+        iyz="-4.9942E-07"
+        izz="0.00021352" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grippertest0325/meshes/Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grippertest0325/meshes/Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_2"
+    type="revolute">
+    <origin
+      xyz="0.02 0 -0.00077864"
+      rpy="0 0 0" />
+    <parent
+      link="Link_1" />
+    <child
+      link="Link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="50"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="Link_innerfinger">
+    <inertial>
+      <origin
+        xyz="-0.0037807 3.1225E-17 -0.017868"
+        rpy="0 0 0" />
+      <mass
+        value="0.0030424" />
+      <inertia
+        ixx="4.5793E-07"
+        ixy="-1.5066E-21"
+        ixz="3.8184E-08"
+        iyy="4.5194E-07"
+        iyz="-1.9432E-22"
+        izz="4.4555E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grippertest0325/meshes/Link_innerfinger.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grippertest0325/meshes/Link_innerfinger.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_innerfinger"
+    type="prismatic">
+    <origin
+      xyz="0.02 -0.08 0.048"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="Link_2" />
+    <child
+      link="Link_innerfinger" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.25"
+      upper="0.25"
+      effort="50"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="Link_exterfinger">
+    <inertial>
+      <origin
+        xyz="0.0037807 -1.648E-16 -0.017868"
+        rpy="0 0 0" />
+      <mass
+        value="0.0030424" />
+      <inertia
+        ixx="4.5793E-07"
+        ixy="-2.3911E-21"
+        ixz="-3.8184E-08"
+        iyy="4.5194E-07"
+        iyz="-2.5791E-21"
+        izz="4.4555E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grippertest0325/meshes/Link_exterfinger.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grippertest0325/meshes/Link_exterfinger.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_exterfinger"
+    type="prismatic">
+    <origin
+      xyz="0.02 -0.13 0.048"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="Link_2" />
+    <child
+      link="Link_exterfinger" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.25"
+      upper="0.25"
+      effort="50"
+      velocity="0.1" />
+  </joint>
+</robot>

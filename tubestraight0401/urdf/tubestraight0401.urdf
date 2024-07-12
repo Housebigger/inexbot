@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tubestraight0401">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="1.25 -0.00098688 0.62711"
+        rpy="0 0 0" />
+      <mass
+        value="106.93" />
+      <inertia
+        ixx="78.399"
+        ixy="3.0113E-13"
+        ixz="-7.3168E-14"
+        iyy="69.372"
+        iyz="-0.066809"
+        izz="120.41" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tubestraight0401/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.75294 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tubestraight0401/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_wing">
+    <inertial>
+      <origin
+        xyz="8.8818E-16 0.12972 1.25"
+        rpy="0 0 0" />
+      <mass
+        value="15074" />
+      <inertia
+        ixx="14789"
+        ixy="-6.8212E-13"
+        ixz="1021.7"
+        iyy="13454"
+        iyz="-4.7891E-12"
+        izz="10901" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tubestraight0401/meshes/Link_wing.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tubestraight0401/meshes/Link_wing.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_wing"
+    type="fixed">
+    <origin
+      xyz="0 0 1.0635"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_wing" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_grippoint">
+    <inertial>
+      <origin
+        xyz="0 0 0.0065"
+        rpy="0 0 0" />
+      <mass
+        value="0.0044044" />
+      <inertia
+        ixx="5.0607E-07"
+        ixy="-3.4868E-22"
+        ixz="1.6544E-22"
+        iyy="1.0792E-07"
+        iyz="6.538E-23"
+        izz="4.4883E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tubestraight0401/meshes/Link_grippoint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tubestraight0401/meshes/Link_grippoint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_grippoint"
+    type="fixed">
+    <origin
+      xyz="1.66 0 1.0635"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_grippoint" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

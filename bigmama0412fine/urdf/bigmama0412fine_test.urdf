@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="bigmama0412fine">
+    <link name="dummy" />
+    <link name="Link_0">
+        
+<inertial>
+            <origin xyz="-0.00331014697034372 -0.00812414737391864 0.0246252656256447" rpy="0 0 0" />
+            <mass value="0.882103386566752" />
+            <inertia ixx="0.00152711161264088" ixy="-1.29472290139739E-05" ixz="1.42354792103917E-05" iyy="0.00147372994335158" iyz="-7.34228051197537E-06" izz="0.0010672817308026" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_0.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_0.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dummy_joint" type="fixed">
+        <parent link="dummy" />
+        <child link="Link_0" />
+    </joint>
+    <link name="Link_1">
+        
+<inertial>
+            <origin xyz="-3.33066907387547E-16 0.12 0.0148133941875552" rpy="0 0 0" />
+            <mass value="0.282384693513862" />
+            <inertia ixx="0.00274447139440248" ixy="2.8212818181065E-20" ixz="-6.61754350388435E-21" iyy="0.000195078787164715" iyz="1.80467643589409E-20" izz="0.00291591183814071" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint_1" type="revolute">
+        <origin xyz="0.0220000000000014 0 0.155" rpy="1.5707963267949 0 1.5707963267949" />
+        <parent link="Link_0" />
+        <child link="Link_1" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-3.14" upper="3.14" effort="5000" velocity="0.05" />
+    </joint>
+    <link name="Link_2">
+        
+<inertial>
+            <origin xyz="5.55111512312578E-15 0.0981842440812921 -0.0518979671215241" rpy="0 0 0" />
+            <mass value="0.345163663974144" />
+            <inertia ixx="0.0036331910417201" ixy="3.25414516732449E-18" ixz="-4.51848640048542E-19" iyy="0.000344054038167575" iyz="0.000241150545790953" izz="0.00379142507539424" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint_2" type="revolute">
+        <origin xyz="0 0.239999999999988 0" rpy="0 0 0" />
+        <parent link="Link_1" />
+        <child link="Link_2" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-3.14" upper="3.14" effort="5000" velocity="0.05" />
+    </joint>
+    <link name="Link_3">
+        
+<inertial>
+            <origin xyz="0.0182556388647204 0.077688167435717 0.0292189539257218" rpy="0 0 0" />
+            <mass value="0.405243678629155" />
+            <inertia ixx="0.0010066908609712" ixy="-1.02117053661611E-05" ixz="-1.29579969608816E-05" iyy="0.000277409370252715" iyz="1.42352093688464E-05" izz="0.00110247571714619" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint_3" type="revolute">
+        <origin xyz="0 0.24 -0.0442" rpy="0 0 0" />
+        <parent link="Link_2" />
+        <child link="Link_3" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" effort="5000" velocity="0.05" />
+    </joint>
+    <link name="Link_4">
+        
+<inertial>
+            <origin xyz="-0.000485846004261159 -1.30393305380477E-05 -0.0301760183585275" rpy="0 0 0" />
+            <mass value="0.476785315675627" />
+            <inertia ixx="0.000466689569560392" ixy="1.3500497583252E-08" ixz="-2.85557114289688E-06" iyy="0.000424232881435247" iyz="7.13603896349437E-09" izz="0.000789818306013661" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint_4" type="revolute">
+        <origin xyz="0 0.145 0.022" rpy="1.5708 0 0" />
+        <parent link="Link_3" />
+        <child link="Link_4" />
+        <axis xyz="0 0 -1" />
+        <limit lower="0" upper="1E-05" effort="1E-05" velocity="1E-05" />
+    </joint>
+    <link name="Link_innerfinger">
+        
+<inertial>
+            <origin xyz="-0.257092561747861 1.00562275325705 -8.99280649946377E-15" rpy="0 0 0" />
+            <mass value="148.376540454963" />
+            <inertia ixx="65.6418454273906" ixy="8.28672866655962" ixz="4.27245870960553E-17" iyy="6.0594973627601" iyz="5.43667175399197E-16" izz="70.7121658537843" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_innerfinger.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_innerfinger.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint_innerfinger" type="prismatic">
+        <origin xyz="0 -1.0755 0" rpy="-1.5707963267949 0 1.5707963267949" />
+        <parent link="Link_4" />
+        <child link="Link_innerfinger" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1" upper="1" effort="500" velocity="0.05" />
+    </joint>
+    <link name="Link_exterfinger">
+        
+<inertial>
+            <origin xyz="0.25709 1.0056 -7.7716E-15" rpy="0 0 0" />
+            <mass value="148.38" />
+            <inertia ixx="65.642" ixy="-8.2867" ixz="5.5127E-14" iyy="6.0595" iyz="4.2609E-13" izz="70.712" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_exterfinger.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_exterfinger.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint_exterfinger" type="prismatic">
+        <origin xyz="0 1.0755 0" rpy="-1.5708 0 1.5708" />
+        <parent link="Link_4" />
+        <child link="Link_exterfinger" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1" upper="1" effort="500" velocity="0.05" />
+    </joint>
+    <link name="Link_baseout">
+        
+<inertial>
+            <origin xyz="-0.257092561747865 -1.00562275325706 5.55111512312578E-15" rpy="0 0 0" />
+            <mass value="148.376540454963" />
+            <inertia ixx="65.6418454273908" ixy="-8.28672866655922" ixz="3.55136239042023E-14" iyy="6.05949736276" iyz="5.81200196882347E-14" izz="70.7121658537844" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_baseout.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_baseout.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint_baseout" type="prismatic">
+        <origin xyz="-1.0755 0 0.01" rpy="1.5708 0 0" />
+        <parent link="Link_0" />
+        <child link="Link_baseout" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1" upper="1" effort="500" velocity="0.05" />
+    </joint>
+    <link name="Link_basein">
+        
+<inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0" />
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_basein.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://bigmama0412fine/meshes/Link_basein.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint_basein" type="prismatic">
+        <origin xyz="1.0755 0 0.01" rpy="1.5708 0 0" />
+        <parent link="Link_0" />
+        <child link="Link_basein" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1" upper="1" effort="500" velocity="0.05" />
+    </joint>
+    
+<transmission name="trans_Joint_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint_1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint_1_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint_2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint_2_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint_3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint_3_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint_4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint_4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint_4_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint_innerfinger">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint_innerfinger">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint_innerfinger_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint_exterfinger">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint_exterfinger">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint_exterfinger_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint_baseout">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint_baseout">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint_baseout_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint_basein">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint_basein">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint_basein_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo reference="Link_4">
+        <material>Gazebo/Yellow</material>
+        <mu1>5</mu1>
+        <mu2>5</mu2>
+        <fdir1>1 0 0</fdir1>
+    </gazebo>
+    <gazebo reference="Link_innerfinger">
+        <material>Gazebo/OrangeTransparent</material>
+        <mu1>10.0</mu1>
+        <mu2>10.0</mu2>
+        <fdir1>1 0 0</fdir1>        
+    </gazebo>
+    <gazebo reference="Link_exterfinger">
+        <material>Gazebo/OrangeTransparent</material>
+        <mu1>10.0</mu1>
+        <mu2>10.0</mu2>
+        <fdir1>1 0 0</fdir1>
+    </gazebo>
+    <gazebo reference="Link_0">
+        <material>Gazebo/Green</material>
+        <mu1>0.9</mu1>
+        <mu2>0.9</mu2>
+        <fdir1>1 0 0</fdir1>
+    </gazebo>
+    <gazebo reference="Link_basein">
+        <material>Gazebo/GreenTransparent</material>
+        <mu1>10.0</mu1>
+        <mu2>10.0</mu2>
+        <fdir1>1 0 0</fdir1>        
+    </gazebo>
+    <gazebo reference="Link_baseout">
+        <material>Gazebo/GreenTransparent</material>
+        <mu1>10.0</mu1>
+        <mu2>10.0</mu2>
+        <fdir1>1 0 0</fdir1>
+    </gazebo>
+    <gazebo>
+     <plugin name="gazebo_grasp_fix" filename="libgazebo_grasp_fix.so">
+           <arm>
+             <arm_name>arm_bigmama</arm_name>
+             <palm_link>Link_4</palm_link>
+             <gripper_link>Link_innerfinger</gripper_link>
+             <gripper_link>Link_exterfinger</gripper_link>
+             <!--<palm_link>Link_0</palm_link>
+             <gripper_link>Link_basein</gripper_link>
+             <gripper_link>Link_baseout</gripper_link>-->
+           </arm>
+       <forces_angle_tolerance>100</forces_angle_tolerance>
+       <update_rate>110</update_rate>
+       <grip_count_threshold>2</grip_count_threshold>
+       <max_grip_count>8</max_grip_count>
+       <release_tolerance>0.1</release_tolerance>
+       <disable_collisions_on_attach>true</disable_collisions_on_attach>
+       <contact_topic>__default_topic__</contact_topic>
+     </plugin>
+    </gazebo>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>

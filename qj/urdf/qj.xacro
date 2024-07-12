@@ -1,0 +1,452 @@
+<?xml version="1.0" ?>
+
+<robot
+  name="qj" xmlns:xacro="http://ros.org/wiki/xacro">  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="6.64736924327754E-05 -0.0348161919202244 0.100127350786493"
+        rpy="0 0 0" />
+      <mass
+        value="500" />
+      <inertia
+        ixx="10"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="10"  />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="robot_Link1">
+    <inertial>
+      <origin
+        xyz="-2.37011604839985E-09 0.00548789154085588 5.05780968352318E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.001" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+   <link name="Link_foot">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.0001 0.0001 0.0001" />
+                </geometry>
+            </visual>
+   </link>
+  <joint name="foot_joint" type="fixed">
+     <parent link="Link_foot"/>
+     <child link="base_link"/>
+   </joint>
+  <joint
+    name="robot_joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.199"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="robot_Link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+    <dynamics damping="0" friction="1"/>
+  </joint>
+  <link
+    name="robot_Link2">
+    <inertial>
+      <origin
+        xyz="-0.00170629239942747 0.179910350771959 0.00880766456089629"
+        rpy="0 0 0" />
+      <mass
+        value="0.001" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0.18 -0.0525"
+      rpy="0 0 0" />
+    <parent
+      link="robot_Link1" />
+    <child
+      link="robot_Link2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+    <dynamics damping="0" friction="1"/>
+  </joint>
+<link
+    name="robot_Link3">
+    <inertial>
+      <origin
+        xyz="-0.000712318989699316 0.0232252507934252 0.00713513827517523"
+        rpy="0 0 0" />
+      <mass
+        value="0.001" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot_joint3"
+    type="revolute">
+    <origin
+      xyz="0 0.34 0"
+      rpy="0 0 0" />
+    <parent
+      link="robot_Link2" />
+    <child
+      link="robot_Link3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+    <dynamics damping="0" friction="1"/>
+  </joint>
+  <link
+    name="robot_Link4">
+    <inertial>
+      <origin
+        xyz="-0.000959020315072412 0.00021285685512662 -0.11094694234401"
+        rpy="0 0 0" />
+      <mass
+     value="0.001" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot_joint4"
+    type="revolute">
+    <origin
+      xyz="0 0.047 -0.108"
+      rpy="0 0 0" />
+    <parent
+      link="robot_Link3" />
+    <child
+      link="robot_Link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+    <dynamics damping="0" friction="1"/>
+  </joint>
+  <link
+    name="robot_Link5">
+    <inertial>
+      <origin
+        xyz="-0.0658860431022918 0.0488951461483525 -0.0548861496464178"
+        rpy="0 0 0" />
+      <mass
+        value="0.001" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.065885 -0.092 0.054878"
+        rpy="0 0  0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.065885 -0.092 0.054878"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot_joint5"
+    type="revolute">
+    <!--origin
+      xyz="-0.065885 0.054878 -0.332"
+      rpy="1.5708 0 3.1416" /-->
+    <origin
+      xyz="0 0 -0.248"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="robot_Link4" />
+    <child
+      link="robot_Link5" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+    <dynamics damping="0" friction="1"/>
+  </joint>
+  <link
+    name="robot_Link6">
+    <inertial>
+      <origin
+        xyz="2.15415157178333E-09 -0.0957156938530383 0.000675361584537959"
+        rpy="0 0 0" />
+      <mass
+        value="0.001" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.001 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 -0.001 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qj/meshes/robot_Link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot_joint6"
+    type="revolute">
+    <!--origin
+      xyz="-0.065885 0.085 -0.054878"
+      rpy="0 0 0" /-->
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="robot_Link5" />
+    <child
+      link="robot_Link6" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="1" />
+    <dynamics damping="0" friction="1"/>
+  </joint>
+
+
+   <!-- Transmissions for ROS Control -->
+
+       <!-- Transmissions for ROS Control -->
+  <xacro:macro name="transmission_block" params="joint_name">
+      <transmission name="tran1">
+          <type>transmission_interface/SimpleTransmission</type>
+          <joint name="${joint_name}">
+              <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          </joint>
+          <actuator name="motor1">
+              <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+              <mechanicalReduction>1</mechanicalReduction>
+          </actuator>
+      </transmission>
+  </xacro:macro>
+    
+
+  <xacro:transmission_block joint_name="robot_joint1"/>
+  <xacro:transmission_block joint_name="robot_joint2"/>
+  <xacro:transmission_block joint_name="robot_joint3"/>
+  <xacro:transmission_block joint_name="robot_joint4"/>
+  <xacro:transmission_block joint_name="robot_joint5"/>
+  <xacro:transmission_block joint_name="robot_joint6"/>
+  
+  <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+          <robotNamespace>/probot_anno</robotNamespace>
+      	  <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      	  <legacyModeNS>True</legacyModeNS>
+      </plugin>
+  </gazebo>
+  
+</robot>

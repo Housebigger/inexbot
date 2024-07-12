@@ -1,0 +1,13 @@
+controller_list:
+  - name: "probot_anno/arm_joint_controller"
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - robot_joint1
+      - robot_joint2
+      - robot_joint3
+      - robot_joint4
+      - robot_joint5
+      - robot_joint6
+

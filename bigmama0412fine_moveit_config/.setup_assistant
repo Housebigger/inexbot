@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: bigmama0412fine
+    relative_path: urdf/bigmama0412fine.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/bigmama0412fine.srdf
+  CONFIG:
+    author_name: hyh
+    author_email: mc25038@umac.mo
+    generated_timestamp: 1712998754

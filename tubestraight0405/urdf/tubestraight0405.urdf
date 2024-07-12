@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tubestraight0405">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.5 -0.00049323 0.64702"
+        rpy="0 0 0" />
+      <mass
+        value="207.32" />
+      <inertia
+        ixx="145.66"
+        ixy="1.1183E-12"
+        ixz="-1.6714E-13"
+        iyy="456.58"
+        iyz="-0.066985"
+        izz="552.9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tubestraight0405/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.75294 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tubestraight0405/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
